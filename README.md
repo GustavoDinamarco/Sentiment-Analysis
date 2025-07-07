@@ -1,4 +1,4 @@
-# Sentiment Analysis with BERT
+# Sentiment Analysis com BERT
 
 Este projeto é uma aplicação web simples para análise de sentimentos utilizando o modelo BERT, integrando uma API externa da IBM para processamento de linguagem natural.
 
@@ -10,7 +10,18 @@ Este projeto é uma aplicação web simples para análise de sentimentos utiliza
 
 ## Estrutura do Projeto
 
-Sentiment-Analysis/ ├── SentimentAnalysis/ │ ├── __init__.py │ └── sentiment_analysis.py ├── static/ │ └── mywebscript.js ├── templates/ │ └── index.html ├── server.py ├── test_sentiment_analysis.py ├── README.md ├── LICENSE └── .gitignore
+```
+Sentiment-Analysis/
+├── SentimentAnalysis/
+│   └── sentiment_analysis.py
+├── static/
+│   └── mywebscript.js
+├── templates/
+│   └── index.html
+├── server.py
+├── test_sentiment_analysis.py
+├── README.md
+```
 
 ## Como Executar
 
@@ -22,18 +33,28 @@ Sentiment-Analysis/ ├── SentimentAnalysis/ │ ├── __init__.py │ �
    Você pode instalar as dependências com:
    ```sh
    pip install flask requests
+   ```
 
-Inicie o servidor Flask:
+2. **Inicie o servidor Flask:**
+   ```sh
+   python server.py
+   ```
 
-Acesse a aplicação: Abra o navegador e acesse http://localhost:5000.
+3. **Acesse a aplicação:**
+   Abra o navegador e acesse [http://localhost:5000](http://localhost:5000).
 
-Utilize a interface:
+4. **Utilize a interface:**
+   - Digite um texto no campo indicado e clique em "Run Sentiment Analysis".
+   - O resultado será exibido na tela.
 
-Digite um texto no campo indicado e clique em "Run Sentiment Analysis".
-O resultado será exibido na tela.
-Testes
+## Testes
+
 Para rodar os testes automatizados:
+```sh
+python test_sentiment_analysis.py
+```
 
-Observações
-A análise de sentimento é feita via API externa da IBM, portanto é necessário acesso à internet.
-O resultado exibido indica se o texto é positivo, negativo ou neutro, junto com um score de confiança.
+## Observações
+
+- A análise de sentimento é feita via API externa da IBM, portanto é necessário acesso à internet.
+- O resultado exibido indica se o texto é positivo, negativo ou neutro, junto com um score de confiança.
